@@ -32,12 +32,6 @@ td {
     border: 1px solid #062654;
 }
 
-caption {
-    font-family:'Courier New', Courier, monospace;
-    color: #062654;
-    font-size: 40px;
-}
-
 table {
     border-collapse: collapse;
     font-size: 1em;
@@ -46,6 +40,11 @@ table {
     margin: auto;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
+}
+
+table th {
+    padding: 10px 10px;
+    background-color:#f30937;
 }
 
 table th,
@@ -73,7 +72,7 @@ tr:not(:first-child):nth-child(odd) {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100px;
+    width: 50px;
     font-family:'Courier New', Courier, monospace;
 }
 
@@ -84,7 +83,7 @@ tr:not(:first-child):nth-child(odd) {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100px;
+    width: 50px;
     font-family:'Courier New', Courier, monospace;
 }
 
@@ -95,7 +94,7 @@ tr:not(:first-child):nth-child(odd) {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100px;
+    width: 50px;
     font-family:'Courier New', Courier, monospace;
 }
 

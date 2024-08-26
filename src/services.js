@@ -1,13 +1,11 @@
-//funciones js peticiones http and dbjson
 //READ - METHOD GET
 //COMO HACER UNA PETICION GET SOBRE UNA ENDPOINT(URL)    -- METODO FETCH QUE ES, COMO SE UTILIZA, POR DONDE PASO LA PETICIÓN
 
+const URL_API = "http://localhost:3000/family";
 
-let apiFamily = "http://localhost:3000/family";
-
-//READ - method: GET  URL:http://localhost:3000/family
-async function getFamily() {
-    const response = await fetch(apiFamily, {
+//READ - method: GET
+async function getAllFamily() {
+    const response = await fetch(URL_API, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json',
@@ -19,7 +17,7 @@ async function getFamily() {
 
 // Obtener tarea por id
 async function getFamilyById(id) {
-    const response = await fetch(`http://localhost:3000/family/${id}`, {
+    const response = await fetch(`${URL_API}/${id}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json", // Indica que estamos trabajando con JSON
@@ -34,33 +32,34 @@ async function getFamilyById(id) {
 
 //DELETE - method: DELETE URL:http://localhost:3000/family/id
 async function deleteFamily(id) {
-    const response = await fetch(`${apiFamily}/${id}`, {
-        method: "DELETE",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    });
+    const confirmed = confirm("¿Estás seguro de que deseas eliminar a este fraterno");
 
-    if (response.ok) {
-        alert("Confirmas que quieres eliminar la información de este fraterno");
-        getFamily();
+    if (confirmed) {
+        const response = await fetch(`${URL_API}/${id}`, {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+        const deletedFamily = await response.json();
+        if (response.ok) {
+            printData();
+        }
+        return deletedFamily;
     } else {
-        console.error("Error al eliminar al fraterno");
+        // El usuario canceló la acción
+        console.log("Acción cancelada por el usuario.");
+        return null;
     }
 }
-
-// //CREATE - method: POST URL:http://localhost:3000/family
-//     async function deleteFamily(){
-//         method:"",
-//         headers:{}
-// }
-
 
 // CREATE   method:POST
 async function createFamily() {
     const response = await fetch(URL_API, {
         method: "POST",
-        headers: {"Content-Type": "application/json",},
+        headers: {
+            "Content-Type": "application/json",
+        },
         body: JSON.stringify({
             "name": "ABC",
             "dni": "DEF",
@@ -77,80 +76,57 @@ async function createFamily() {
     });
     const createdFamily = await response.json();
     if (response.ok) {
-        getFamily();
+        printData();
     }
     return createdFamily;
-    // Implementar código para crear una nueva tarea
 }
-
-
-
 
 // //UPDATE - method: DELETE URL:http://localhost:3000/family
 //     async function deleteFamily(){
-// }
+// 
+
 
 
 //MOSTRAR EN HTML
+const familyList = document.getElementById("familyList")
+
 async function printData() {
-    let familyList = document.getElementById("familyList");
-    getFamily().then(family => {
-        if (family) {
-            family.map(member => {
-                let row = document.createElement("tr")
-                Object.entries(member).forEach(([key, value]) => {
-                    if (key == "picture") {
-                        let imagen = document.createElement('img');
-                        imagen.src = './img/' + member.picture;
-                        row.appendChild(imagen);
-                    }
-                    else {
-                        let column = document.createElement("td")
-                        let columnText = document.createTextNode(value)
-                        column.appendChild(columnText)
-                        row.appendChild(column)
-                    }
-                });
-                let br = document.createElement("br")
-                let br1 = document.createElement("br")
-                let viewButton = document.createElement("button");
-                viewButton.textContent = "VIEW";
-                let editButton = document.createElement("button");
-                editButton.textContent = "EDIT";
-                let deleteButton = document.createElement("button");
-                deleteButton.textContent = "DELETE";
-                deleteButton.onclick = () => deleteFamily(member.id);
-                row.appendChild(viewButton);
-                row.appendChild(br);
-                row.appendChild(editButton);
-                row.appendChild(br1);
-                row.appendChild(deleteButton);
-                familyList.appendChild(row)
-                viewButton.className = 'viewButton';
-                editButton.className = 'editButton';
-                deleteButton.className = 'deleteButton';
-            })
-        }
-    });
+    const characters = await getAllFamily() //Todo lo que hace la funcion getAllFamily se guarda en la constante const charachters
+    familyList.innerHTML = `
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>DNI</th>
+            <th>CUMPLEAÑOS</th>
+            <th>AÑO DE INGRESO</th>
+            <th>PAÍS</th>
+            <th>CIUDAD</th>
+            <th>DIRECCIÓN</th>
+            <th>whatsApp</th>
+            <th>email</th>
+            <th>Fotografía</th>
+            <th>Talla</th>
+            <th colspan="3">Acciones</th>
+        </tr >
+        `;
+    characters.map((character) => {
+        familyList.innerHTML += `<tr>
+        <td>${character.id}</td>
+        <td>${character.name}</td>
+        <td>${character.dni}</td>
+        <td>${character.birthday}</td>
+        <td>${character.entryYear}</td>
+        <td>${character.country}</td>
+        <td>${character.city}</td>
+        <td>${character.addres}</td>
+        <td>${character.whatsapp}</td>
+        <td>${character.email}</td>
+        <td><img src="${character.picture}" alt="Imagen de ${character.name}" width="100" height="100"></td>
+        <td>${character.size}</td>
+        <td> <button class="viewButton" onclick= "deleteCharacter(${character.id})">View</button> </td>
+        <td> <button class="editButton" onclick= "deleteCharacter(${character.id})">Edit</button> </td>
+        <td> <button class="deleteButton" onclick= "deleteFamily(${character.id})">Delete</button> </td>
+        </tr>`
+    })
 }
 printData()
-
-//CODIGO ej.
-// async function printFamily(){
-//     const family = await getFamily();
-//     family.map(family=>{
-//         listTag.innerHTML +=
-//         `<li>${family.name} <button onclick="deleteFamily(${family.name})>
-//     });
-
-
-// async function printFamily() {
-//   const family = await getFamily();
-
-//   family.forEach(familyMember => {
-//     listTag.innerHTML += `
-//       <li>${familyMember.name} <button onclick="deleteFamily('${familyMember.name}')">Delete</button></li>
-//     `;
-//   });
-// }
-// printFamily()
