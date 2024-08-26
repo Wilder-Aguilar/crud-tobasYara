@@ -6,8 +6,6 @@
 let apiFamily = "http://localhost:3000/family";
 
 //READ - method: GET  URL:http://localhost:3000/family
-
-
 async function getFamily() {
     const response = await fetch(apiFamily, {
         method: "GET",
@@ -44,10 +42,10 @@ async function deleteFamily(id) {
     });
 
     if (response.ok) {
-        alert("Confirma que quiere eliminar");
+        alert("Confirmas que quieres eliminar la información de este fraterno");
         getFamily();
     } else {
-        console.error("Error al eliminar la tarea");
+        console.error("Error al eliminar al fraterno");
     }
 }
 
@@ -58,17 +56,47 @@ async function deleteFamily(id) {
 // }
 
 
+// CREATE   method:POST
+async function createFamily() {
+    const response = await fetch(URL_API, {
+        method: "POST",
+        headers: {"Content-Type": "application/json",},
+        body: JSON.stringify({
+            "name": "ABC",
+            "dni": "DEF",
+            "birthday": "25/06/1985",
+            "entryYear": 2017,
+            "country": "Bolivia",
+            "city": "La Paz",
+            "addres": "Alejandrina Moran,15",
+            "whatsapp": "+34 632354542",
+            "email": "iJK@gmail.com",
+            "picture": "f1.png",
+            "size": "M"
+        })
+    });
+    const createdFamily = await response.json();
+    if (response.ok) {
+        getFamily();
+    }
+    return createdFamily;
+    // Implementar código para crear una nueva tarea
+}
+
+
+
+
 // //UPDATE - method: DELETE URL:http://localhost:3000/family
 //     async function deleteFamily(){
 // }
 
 
 //MOSTRAR EN HTML
-function printData() {
+async function printData() {
     let familyList = document.getElementById("familyList");
     getFamily().then(family => {
         if (family) {
-            family.forEach(member => {
+            family.map(member => {
                 let row = document.createElement("tr")
                 Object.entries(member).forEach(([key, value]) => {
                     if (key == "picture") {
@@ -126,9 +154,3 @@ printData()
 //   });
 // }
 // printFamily()
-
-
-
-
-
-
