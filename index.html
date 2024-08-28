@@ -10,34 +10,64 @@
 
 <body>
     <h1 id="name">FRATERNIDAD "TOBAS YARA"</h1>
-
+    <img src="img/logo.png" alt="Logo Tobas Yara" class="logo">
     <button id="open" class="addButton">
         AGREGAR
     </button>
 
-     <div class="modalContainer" id="modalContainer">
+    <div class="modalContainer" id="modalContainer">
         <div class="modal">
             <h2>Datos del nuevo fraterno</h2>
-            <form action="" id="addNewCharacter" autocomplete="off">
-                <input type="text" placeholder="Introduce el nombre del fraterno" name="name" id="nombre">
-                <input type="text" placeholder="Introduce su DNI" name="dni" id="dni">
-                <input type="text" placeholder="Introduce su fecha de nacimiento" name="birthday" id="born">
-                <input type="text" placeholder="Introduce el año de ingreso al bloque" name="entryYear" id="entryYear">
-                <input type="text" placeholder="Introduce su paìs de residencia" name="country" id="country">
-                <input type="text" placeholder="Introduce su ciudad de residencia" name="city" id="city">
-                <input type="text" placeholder="Introduce su dirección actual" name="addres" id="addres">
-                <input type="text" placeholder="Introduce su numero de whatsapp" name="whatsapp" id="whatsapp">
-                <input type="text" placeholder="Introduce su correo electrónico" name="email" id="email">
-                <input type="text" placeholder="Introduce su fotografia" name="picture" id="pictureInput" accept="image/*">
-                <input type="text" placeholder="Introduce su talla" name="size" id="size">
-                <button onclick="createFamily()" id="close" class="closedButton">
-                    ENVIAR
+            <button id="close" class="closedPopUp">
+                X
+            </button>
+            <form action="" id="addNewCharacter" autocomplete="on"> <!--enctype="multipart/form-data"-->
+                <input type="text" placeholder="Introduce el nombre del fraterno" name="name" required>
+                <input type="text" placeholder="Introduce su DNI" name="dni" required>
+                <input type="text" placeholder="Introduce su fecha de nacimiento" name="birthday" required>
+                <input type="text" placeholder="Introduce el año de ingreso al bloque" name="entryYear" required>
+                <input type="text" placeholder="Introduce su país de residencia" name="country" required>
+                <input type="text" placeholder="Introduce su ciudad de residencia" name="city" required>
+                <input type="text" placeholder="Introduce su dirección actual" name="addres" required>
+                <input type="text" placeholder="Introduce su número de whatsapp" name="whatsapp" required>
+                <input type="text" placeholder="Introduce su correo electrónico" name="email" required>
+                <input type="text" placeholder="Introduce su fotografia" name="picture" accept="image/*"
+                    required>
+                <input type="text" placeholder="Introduce su talla" name="size" required>
+                <button onclick="createFamily()" class="addComponent">
+                    GUARDAR
                 </button>
             </form>
         </div>
     </div>
-    <table id="familyList">
 
+    <div class="modalContainer" id="modalContainerEdit">
+        <div class="modal">
+            <h2>Actualización de datos del fraterno</h2>
+            <button id="closeEdit" class="closedPopUp">
+                X
+            </button>
+            <form action="" id="editComponent"> <!--enctype="multipart/form-data"-->
+                <input type="text" name="ide" disabled>
+                <input type="text" name="namee" required>
+                <input type="text" name="dnie" required>
+                <input type="text" name="birthdaye" required>
+                <input type="text" name="entryYeare" required>
+                <input type="text" name="countrye" required>
+                <input type="text" name="citye" required>
+                <input type="text" name="addrese" required>
+                <input type="text" name="whatsappe" required>
+                <input type="text" name="emaile" required>
+                <input type="text" name="picturee" accept="image/*" required>
+                <input type="text" name="sizee" required>
+                <button onclick="updateComponent()">
+                    ACTUALIZAR
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <table id="familyList">
     </table>
 
     <script src="src/services.js"></script>

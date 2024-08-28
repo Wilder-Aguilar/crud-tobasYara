@@ -6,19 +6,27 @@
 }
 
 body {
-    background-color: #E0FBFC;
+    background-color: #FF7100;
 }
 
 h1 {
-    font-family:'Courier New', Courier, monospace;
-    color: #062654;
+    font-family: 'Courier New', Courier, monospace;
+    color: #0B01B8;
     text-align: center;
-    margin-top: 40px ;
+    margin-top: 40px;
     font-size: 50px;
 }
 
-/* .modalContainer{
-    /* display: flex;
+.logo{
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    width: 250px;
+    height: 150px;
+}
+
+.modalContainer {
+    display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -28,77 +36,97 @@ h1 {
     bottom: 0;
     background-color:rgba(0,0,0,0.8);
     pointer-events: none;
-    opacity: 1; */
-/* }
+    opacity: 0;
+}
 
-.show{
+.show {
     pointer-events: auto;
     opacity: 1;
 }
 
-.modal{
+ .modal {
     background-color: white;
-    width: 50%;
-    max-width: 100%;
+    width: 40%;
     padding: 30px 50px;
-    border-radius: 10px; /* Bordes ligeramente redondeados */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centra vertical y horizontalmente */
-} */
+    transform: translate(-50%, -50%); 
+    } 
 
-/* .modal h1{
-    margin: 0;    
+.modal h1 {
+    margin: 0;
 }
 
-form{
+form {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5; /* Fondo gris claro */
+    background-color: #f5f5f5;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-form input{
+form input {
     margin: 5px;
     padding: 5px;
-} */
-
-
+    font-family: 'Courier New', Courier, monospace;
+}
 
 .addButton {
     color: white;
-    background-color: #062654;
+    background-color: #0B01B8;
     border: none;
     border-radius: 5px;
     padding: 10px 10px;
     font-size: 16px;
     cursor: pointer;
     width: 100px;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     margin-left: 50%;
-    margin-top: 20px ;
-    margin-bottom: 20px ;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.closedButton {
+.updateComponent {
     color: white;
-    background-color: #062654;
+    background-color: #0B01B8;
     border: none;
     border-radius: 5px;
     padding: 10px 10px;
     font-size: 16px;
     cursor: pointer;
     width: 30%;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     margin: auto;
-} */ */
+}
+
+.closedPopUp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    background-color: #0B01B8;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    width: auto;
+    font-family: 'Courier New', Courier, monospace;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.closedPopUp:hover {
+    background-color: #084080;
+    transform: scale(1.05);
+}
 
 td {
-    border: 1px solid #FEEF00;
+    border: 1px solid #FFED00;
 }
 
 table {
@@ -108,12 +136,12 @@ table {
     width: 90%;
     margin: auto;
     text-align: center;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 table th {
     padding: 10px 10px;
-    background-color:#FE0002;
+    background-color: #FF0000;
 }
 
 table th,
@@ -122,41 +150,23 @@ table td {
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #0600BE;
+    background-color: #0B01B8;
     color: #ffffff;
 }
 
-.viewButton {
-    color: white;
-    background-color: #4caf50;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 50px;
-    font-family:'Courier New', Courier, monospace;
-}
-
 .editButton {
-    color: white;
-    background-color: #ffa500;
-    padding: 5px 10px;
-    border: none;
+    padding: 5px 5px;
     border-radius: 5px;
     cursor: pointer;
-    width: 50px;
-    font-family:'Courier New', Courier, monospace;
+    width: 60px;
 }
 
 .deleteButton {
-    color: white;
-    background-color: #DC143C;
-    padding: 5px 10px;
+    padding: 5px 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 50px;
-    font-family:'Courier New', Courier, monospace;
+    width: 60px;
 }
 
 .delete:hover {
