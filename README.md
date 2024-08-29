@@ -2,7 +2,7 @@
 Aplicación de CRUD para la gestión de los integrantes de una fraternidad.
 
 ## Descripción
-Este proyecto proporciona una interfaz web para gestionar los datos de los integarntes de una fraternidad, aplicando el CRUD (Create/Crear,Read/Leer, Update/Actualizar y Delete/Borrar).
+Este proyecto proporciona una interfaz web para gestionar los datos de los integarntes de una fraternidad, aplicando el CRUD (Create/Crear, Read/Leer, Update/Actualizar y Delete/Borrar).
 
 ## Empezando 🚀
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
@@ -10,7 +10,6 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 ## Requisitos Previos 📋
 
 - **Node.js** instalado en tu máquina.
-- Familiaridad básica con **JavaScript**, **HTML**, y **CSS**.
 
 ## Instalación 🔧
 
@@ -35,7 +34,7 @@ npm install
 npm run api
 ```
 
-Esto iniciará un servidor en tu localhost que servirá como nuestra API simulada.
+Esto iniciará un servidor en tu localhost que servirá como nuestra API fake.
 
 **4. Abrir el archivo `index.html`:** ⚙️
 
@@ -44,29 +43,32 @@ Puedes abrir `index.html` en tu navegador para ver la aplicación en funcionamie
 
 ## Imágenes de la Web 🌅
 
+La pantalla principal tiene el siguiente aspecto:
 
+![](https://iili.io/djLPx2a.png)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PHoEKq0D0jc?si=TMIcxKzPxVTMPmIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Como se puede apreciar se cuenta con lo siguiente: 
+**C (CREATE)**: Un boton para agregar la información de un nuevo miembro de la fraternidad a través de un formulario modal.
+**R (READ)**: La visualización de todos los miembros de la fraternidad en una tabla.
+**U (UPDATE)**: Un boton que permite la modificación de los datos de un miembro existente.
+**D (DELETE)**: Un boton que permite la eliminación de la información de un miembro de la fraternidad. 
 
+El boton agregar despliega el siguiente formulario:
 
+![](https://iili.io/djLUkPa.png)
 
+y el icono de editar despliega el siguiente formulario:
 
-Despliegue 📦
-Agrega notas adicionales sobre cómo hacer implementar
+![](https://iili.io/djL6HDN.png)
 
-
-
-
-Versionado 📌
-Usamos SemVer para el versionado. Para todas las versiones disponibles, mire las etiquetas en este repositorio .
 
 ## 💻 Tecnologías empleadas 🛠️
 
-[![HTML](https://img.shields.io/badge/HTML-orange?style=for-the-badge&logo=html5&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/HTML): Crea la estructura básica de la página, incluyendo formularios y botones.
+[![HTML](https://img.shields.io/badge/HTML-orange?style=for-the-badge&logo=html5&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/HTML)    Crea la estructura básica de la página, incluyendo formularios y botones.
   
-[![CSS](https://img.shields.io/badge/CSS-blue?style=for-the-badge&logo=css3&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/CSS): Estiliza la página para que sea visualmente atractiva y fácil de usar.
+[![CSS](https://img.shields.io/badge/CSS-blue?style=for-the-badge&logo=css3&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/CSS)    Estiliza la página para que sea visualmente atractiva y fácil de usar.
   
-[![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/JavaScript): Captura los eventos del usuario, modifica el contenido de la página HTML para mostrar o actualizar datos (Manipulación del DOM); envía solicitudes al servidor para crear, leer, actualizar o eliminar datos y muestra los resultados de las operaciones del servidor en la página.
+[![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/JavaScript)    Captura los eventos del usuario, modifica el contenido de la página HTML para mostrar o actualizar datos (Manipulación del DOM); envía solicitudes al servidor para crear, leer, actualizar o eliminar datos y muestra los resultados de las operaciones del servidor en la página.
 
 
 ## 🔮 Mirando al futuro
@@ -77,54 +79,4 @@ Todo proyecto requiere de mejoras, se tiene identificada la inclusión de fotogr
 Wilder Aguilar - https://github.com/Wilder-Aguilar
 
 # Licencia 📄
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo LICENSE.md para detalles
-
-
-
-Descripción
-Este proyecto proporciona una interfaz web para gestionar los datos de los miembros de una fraternidad, aplicando el CRUD (Create/Crear,Read/Leer, Update/Actualizar y Delete/Borrar).
-
-Permite realizar las siguientes operaciones:
-
-Listar miembros: Muestra todos los miembros de la fraternidad en una tabla.
-Crear nuevos miembros: Agrega un nuevo miembro a la fraternidad a través de un formulario modal.
-Editar miembros: Modifica los datos de un miembro existente.
-Eliminar miembros: Elimina un miembro de la fraternidad.
-Tecnologías Utilizadas
-Frontend: HTML, CSS, JavaScript
-Backend: Un servidor Node.js con un framework como Express (se asume basado en la URL de la API)
-Base de datos: Probablemente MongoDB o PostgreSQL (se asume basado en el formato de los datos)
-Instalación y Uso
-Requisitos previos:
-
-Node.js y npm (o yarn) instalados.
-Un servidor local en ejecución (e.g., Nodemon) con el backend.
-Clonar el repositorio:
-Bash
-git clone https://tu-repositorio.git
-Usa el código con precaución.
-
-Instalar dependencias:
-Bash
-cd tu-repositorio
-npm install
-Usa el código con precaución.
-
-Iniciar el servidor de desarrollo:
-Bash
-npm start
-Usa el código con precaución.
-
-Abrir el proyecto en un navegador web: El proyecto debería estar accesible en http://localhost:3000 o la dirección de tu servidor local.
-Estructura del Proyecto
-index.html: Archivo principal que contiene el HTML de la interfaz de usuario.
-style.css: Hoja de estilos para dar formato a la página.
-script.js: Archivo JavaScript que contiene la lógica principal de la aplicación, incluyendo las llamadas a la API y la manipulación del DOM.
-API REST
-La aplicación interactúa con una API REST en el servidor backend. Las rutas de la API son:
-
-GET /family: Obtiene todos los miembros.
-GET /family/:id: Obtiene un miembro específico por su ID.
-POST /family: Crea un nuevo miembro.
-PUT /family/:id: Actualiza un miembro existente.
-DELETE /family/:id: Elimina un miembro.
+Este proyecto está bajo la Licencia (Tu Licencia) 
