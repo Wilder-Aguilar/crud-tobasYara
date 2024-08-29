@@ -1,4 +1,4 @@
-## Título del proyecto
+# Título del proyecto
 Aplicación de CRUD para la gestión de los integrantes de una fraternidad.
 
 ## Descripción
@@ -62,12 +62,16 @@ Usamos SemVer para el versionado. Para todas las versiones disponibles, mire las
   
 [![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/JavaScript): Captura los eventos del usuario, modifica el contenido de la página HTML para mostrar o actualizar datos (Manipulación del DOM); envía solicitudes al servidor para crear, leer, actualizar o eliminar datos y muestra los resultados de las operaciones del servidor en la página.
 
+
+## 🔮 Mirando al futuro
+
+Todo proyecto requiere de mejoras, se tiene identificada la inclusión de fotografías de los componentes de la fraternidad; esto permitirá crear perfiles más completos y personalizables. Si estás interesado en contribuir a esta función, te invito a clonar el repositorio y crear una rama para tus cambios. ¡Tu ayuda es muy valorada!
+
 # Autores ✒️
 Wilder Aguilar - https://github.com/Wilder-Aguilar
 
 # Licencia 📄
 Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo LICENSE.md para detalles
-
 
 
 
@@ -118,19 +122,4 @@ GET /family/:id: Obtiene un miembro específico por su ID.
 POST /family: Crea un nuevo miembro.
 PUT /family/:id: Actualiza un miembro existente.
 DELETE /family/:id: Elimina un miembro.
-Contribuciones
-Las contribuciones son bienvenidas. Por favor, abre un issue para discutir nuevas características o mejoras.
 
-Licencia
-[Especificar la licencia utilizada, por ejemplo, MIT]
-
-Notas:
-
-Personalizar: Adapta este README para reflejar las características específicas de tu proyecto.
-Detalles técnicos: Incluye más detalles técnicos si son relevantes, como la estructura de la base de datos, las bibliotecas utilizadas, etc.
-Capturas de pantalla: Agrega capturas de pantalla para mostrar la interfaz de usuario.
-Instrucciones de despliegue: Si el proyecto está desplegado en un servidor, incluye instrucciones detalladas sobre cómo acceder a él.
-Documentación adicional: Considera agregar documentación más detallada sobre el código, las decisiones de diseño, etc.
-Este README proporciona una base sólida para tu proyecto. Puedes personalizarlo aún más para que sea más informativo y útil para otros desarrolladores.
-
-¿Necesitas más ayuda para personalizar este README?
