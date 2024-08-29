@@ -17,11 +17,11 @@
 
     <div class="modalContainer" id="modalContainer">
         <div class="modal">
-            <h2>Datos del nuevo fraterno</h2>
+            <h2 class="h2">Datos del nuevo fraterno</h2>
             <button id="close" class="closedPopUp">
                 X
             </button>
-            <form action="" id="addNewCharacter" autocomplete="on"> <!--enctype="multipart/form-data"-->
+            <form action="" id="addNewCharacter" autocomplete="on">
                 <input type="text" placeholder="Introduce el nombre del fraterno" name="name" required>
                 <input type="text" placeholder="Introduce su DNI" name="dni" required>
                 <input type="text" placeholder="Introduce su fecha de nacimiento" name="birthday" required>
@@ -31,10 +31,8 @@
                 <input type="text" placeholder="Introduce su dirección actual" name="addres" required>
                 <input type="text" placeholder="Introduce su número de whatsapp" name="whatsapp" required>
                 <input type="text" placeholder="Introduce su correo electrónico" name="email" required>
-                <input type="text" placeholder="Introduce su fotografia" name="picture" accept="image/*"
-                    required>
                 <input type="text" placeholder="Introduce su talla" name="size" required>
-                <button onclick="createFamily()" class="addComponent">
+                <button onclick="createComponent()" class="addComponent">
                     GUARDAR
                 </button>
             </form>
@@ -43,24 +41,34 @@
 
     <div class="modalContainer" id="modalContainerEdit">
         <div class="modal">
-            <h2>Actualización de datos del fraterno</h2>
+            <h2 class="h2">Actualización de datos del fraterno</h2>
             <button id="closeEdit" class="closedPopUp">
                 X
             </button>
-            <form action="" id="editComponent"> <!--enctype="multipart/form-data"-->
-                <input type="text" name="ide" disabled>
-                <input type="text" name="namee" required>
-                <input type="text" name="dnie" required>
-                <input type="text" name="birthdaye" required>
-                <input type="text" name="entryYeare" required>
-                <input type="text" name="countrye" required>
-                <input type="text" name="citye" required>
-                <input type="text" name="addrese" required>
-                <input type="text" name="whatsappe" required>
-                <input type="text" name="emaile" required>
-                <input type="text" name="picturee" accept="image/*" required>
-                <input type="text" name="sizee" required>
-                <button onclick="updateComponent()">
+            <form action="" id="editComponent" class="formulario">
+                <label for="name">Id:</label>
+                <input type="text" name="ide" disabled class="inputf">
+                <label for="name">Nombre y Apellido:</label>
+                <input type="text" name="namee" required class="inputf">
+                <label for="dni">DNI:</label>
+                <input type="text" name="dnie" required class="inputf">
+                <label for="birthday">Fecha de nacimiento:</label>
+                <input type="text" name="birthdaye" required class="inputf">
+                <label for="entryYear">Año de ingreso al bloque:</label>
+                <input type="text" name="entryYeare" required class="inputf">
+                <label for="country">País de residencia:</label>
+                <input type="text" name="countrye" required class="inputf">
+                <label for="city">Ciudad de residencia:</label>
+                <input type="text" name="citye" required class="inputf">
+                <label for="address">Dirección:</label>
+                <input type="text" name="addrese" required class="inputf">
+                <label for="whatsapp">Whatsapp:</label>
+                <input type="text" name="whatsappe" required class="inputf">
+                <label for="email">Correo electrónico:</label>
+                <input type="text" name="emaile" required class="inputf">
+                <label for="size">Talla:</label>
+                <input type="text" name="sizee" required class="inputf">
+                <button onclick="updateComponent()" class="addComponent">
                     ACTUALIZAR
                 </button>
             </form>

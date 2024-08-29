@@ -1,7 +1,7 @@
 const URL_API = "http://localhost:3000/family";
 
 //READ - method: GET
-async function getAllFamily() {
+async function getAllComponents() {
     const response = await fetch(URL_API, {
         method: "GET",
         headers: {
@@ -13,7 +13,7 @@ async function getAllFamily() {
 }
 
 //READ ONE - method: GET
-async function getOneFamily(id) {
+async function getOneComponent(id) {
     const response = await fetch(`${URL_API}/${id}`, {
         method: "GET",
         headers: {
@@ -28,20 +28,19 @@ async function getOneFamily(id) {
 const familyList = document.getElementById("familyList")
 
 async function printData() {
-    const members = await getAllFamily() //Todo lo que hace la funcion getAllFamily se guarda en la constante const charachters
+    const members = await getAllComponents() 
     familyList.innerHTML = `
         <tr>
             <th>Id</th>
             <th>Nombre</th>
             <th>DNI</th>
-            <th>Cumpleaños</th>
+            <th>Fecha de nacimiento</th>
             <th>Año de ingreso</th>
             <th>País</th>
             <th>Ciudad</th>
             <th>Dirección</th>
-            <th>whatsApp</th>
+            <th>WhatsApp</th>
             <th>email</th>
-            <th>Fotografia</th>
             <th>Talla</th>
             <th colspan="2">Acciones</th>
         </tr >
@@ -58,17 +57,16 @@ async function printData() {
         <td>${member.addres}</td>
         <td>${member.whatsapp}</td>
         <td>${member.email}</td>
-        <td><img src="${member.picture}" alt="Imagen de ${member.name}" width="100" height="100"></td>
         <td>${member.size}</td>
-        <td> <button class="editButton" onclick= "openEditForm(${member.id})"><img src="img/edit.png" alt="Editar" width="20" height="30"></button> </td>
-        <td> <button class="deleteButton" onclick= "deleteFamily('${member.id}')"><img src="img/delete.png" alt="Editar" width="20" height="30"></button> </td>
+        <td> <button class="editButton" onclick= "openEditForm('${member.id}')"><img src="img/edit.png" alt="Editar" width="20" height="30"></button> </td>
+        <td> <button class="deleteButton" onclick= "deleteComponent('${member.id}')"><img src="img/delete.png" alt="Editar" width="20" height="30"></button> </td>
         </tr>`
     })
 }
 printData();
 
 //DELETE - method: DELETE URL:http://localhost:3000/family/id
-async function deleteFamily(id) {
+async function deleteComponent(id) {
     const confirmed = confirm("¿Estás seguro de que deseas eliminar a este fraterno?");
     if (confirmed) {
         const response = await fetch(`${URL_API}/${id}`, {
@@ -111,7 +109,7 @@ async function deleteFamily(id) {
 
 // CREATE   method:POST URL:http://localhost:3000/family/id
 
-async function createFamily() {
+async function createComponent() {
     const form = document.getElementById("addNewCharacter");
     const newCharacter = {
         name: form.name.value,
@@ -123,10 +121,9 @@ async function createFamily() {
         addres: form.addres.value,
         whatsapp: form.whatsapp.value,
         email: form.email.value,
-        picture: "img/" + form.picture.value,
         size: form.size.value
     };
-    if (!form.name.value || !form.dni.value || !form.birthday.value || !form.entryYear.value || !form.city.value || !form.country.value || !form.addres.value || !form.whatsapp.value || !form.email.value || !form.picture.value || !form.size.value) {
+    if (!form.name.value || !form.dni.value || !form.birthday.value || !form.entryYear.value || !form.city.value || !form.country.value || !form.addres.value || !form.whatsapp.value || !form.email.value || !form.size.value) {
         return alert("Todos los campos son necesarios")
     };
     const response = await fetch(URL_API, {
@@ -153,7 +150,7 @@ async function openEditForm(id) {
     });
     
     const form = document.getElementById("editComponent");
-    const member = await getOneFamily(id);
+    const member = await getOneComponent(id);
     form.ide.value = member.id;
     form.namee.value = member.name;
     form.dnie.value = member.dni;
@@ -164,12 +161,10 @@ async function openEditForm(id) {
     form.addrese.value = member.addres;
     form.whatsappe.value = member.whatsapp;
     form.emaile.value = member.email;
-    form.picturee.value = member.picture;
     form.sizee.value = member.size;
 }
 
 async function updateComponent() {
-    console.log("UPDATE COMPONENT");
       const form = document.getElementById("editComponent");
       const editComponents = {
           id: form.ide.value,
@@ -182,7 +177,6 @@ async function updateComponent() {
           addres: form.addrese.value,
           whatsapp: form.whatsappe.value,
           email: form.emaile.value,
-          picture: "img/" + form.picturee.value,
           size: form.sizee.value
       }
       console.log(editComponents);
