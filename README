@@ -1,0 +1,136 @@
+## Título del proyecto
+Aplicación de CRUD para la gestión de los integrantes de una fraternidad.
+
+## Descripción
+Este proyecto proporciona una interfaz web para gestionar los datos de los integarntes de una fraternidad, aplicando el CRUD (Create/Crear,Read/Leer, Update/Actualizar y Delete/Borrar).
+
+## Empezando 🚀
+Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
+
+## Requisitos Previos 📋
+
+- **Node.js** instalado en tu máquina.
+- Familiaridad básica con **JavaScript**, **HTML**, y **CSS**.
+
+## Instalación 🔧
+
+Para comenzar con el proyecto, sigue los siguientes pasos:
+
+**1. Clonar el repositorio:**
+
+```bash
+git clone https://github.com/Wilder-Aguilar/crud-tobasYara.git
+cd crud-tobasYara
+```
+
+**2. Instalar las dependencias:**
+
+```bash
+npm install
+```
+
+**3. Iniciar el servidor json-server:**
+
+```bash
+npm run api
+```
+
+Esto iniciará un servidor en tu localhost que servirá como nuestra API simulada.
+
+**4. Abrir el archivo `index.html`:** ⚙️
+
+Puedes abrir `index.html` en tu navegador para ver la aplicación en funcionamiento.
+
+
+
+
+
+Despliegue 📦
+Agrega notas adicionales sobre cómo hacer implementar
+
+
+
+
+Versionado 📌
+Usamos SemVer para el versionado. Para todas las versiones disponibles, mire las etiquetas en este repositorio .
+
+## 💻 Tecnologías empleadas 🛠️
+
+[![HTML](https://img.shields.io/badge/HTML-orange?style=for-the-badge&logo=html5&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/HTML): Crea la estructura básica de la página, incluyendo formularios y botones.
+  
+[![CSS](https://img.shields.io/badge/CSS-blue?style=for-the-badge&logo=css3&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/CSS): Estiliza la página para que sea visualmente atractiva y fácil de usar.
+  
+[![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/JavaScript): Captura los eventos del usuario, modifica el contenido de la página HTML para mostrar o actualizar datos (Manipulación del DOM); envía solicitudes al servidor para crear, leer, actualizar o eliminar datos y muestra los resultados de las operaciones del servidor en la página.
+
+# Autores ✒️
+Wilder Aguilar - https://github.com/Wilder-Aguilar
+
+# Licencia 📄
+Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo LICENSE.md para detalles
+
+
+
+
+Descripción
+Este proyecto proporciona una interfaz web para gestionar los datos de los miembros de una fraternidad, aplicando el CRUD (Create/Crear,Read/Leer, Update/Actualizar y Delete/Borrar).
+
+Permite realizar las siguientes operaciones:
+
+Listar miembros: Muestra todos los miembros de la fraternidad en una tabla.
+Crear nuevos miembros: Agrega un nuevo miembro a la fraternidad a través de un formulario modal.
+Editar miembros: Modifica los datos de un miembro existente.
+Eliminar miembros: Elimina un miembro de la fraternidad.
+Tecnologías Utilizadas
+Frontend: HTML, CSS, JavaScript
+Backend: Un servidor Node.js con un framework como Express (se asume basado en la URL de la API)
+Base de datos: Probablemente MongoDB o PostgreSQL (se asume basado en el formato de los datos)
+Instalación y Uso
+Requisitos previos:
+
+Node.js y npm (o yarn) instalados.
+Un servidor local en ejecución (e.g., Nodemon) con el backend.
+Clonar el repositorio:
+Bash
+git clone https://tu-repositorio.git
+Usa el código con precaución.
+
+Instalar dependencias:
+Bash
+cd tu-repositorio
+npm install
+Usa el código con precaución.
+
+Iniciar el servidor de desarrollo:
+Bash
+npm start
+Usa el código con precaución.
+
+Abrir el proyecto en un navegador web: El proyecto debería estar accesible en http://localhost:3000 o la dirección de tu servidor local.
+Estructura del Proyecto
+index.html: Archivo principal que contiene el HTML de la interfaz de usuario.
+style.css: Hoja de estilos para dar formato a la página.
+script.js: Archivo JavaScript que contiene la lógica principal de la aplicación, incluyendo las llamadas a la API y la manipulación del DOM.
+API REST
+La aplicación interactúa con una API REST en el servidor backend. Las rutas de la API son:
+
+GET /family: Obtiene todos los miembros.
+GET /family/:id: Obtiene un miembro específico por su ID.
+POST /family: Crea un nuevo miembro.
+PUT /family/:id: Actualiza un miembro existente.
+DELETE /family/:id: Elimina un miembro.
+Contribuciones
+Las contribuciones son bienvenidas. Por favor, abre un issue para discutir nuevas características o mejoras.
+
+Licencia
+[Especificar la licencia utilizada, por ejemplo, MIT]
+
+Notas:
+
+Personalizar: Adapta este README para reflejar las características específicas de tu proyecto.
+Detalles técnicos: Incluye más detalles técnicos si son relevantes, como la estructura de la base de datos, las bibliotecas utilizadas, etc.
+Capturas de pantalla: Agrega capturas de pantalla para mostrar la interfaz de usuario.
+Instrucciones de despliegue: Si el proyecto está desplegado en un servidor, incluye instrucciones detalladas sobre cómo acceder a él.
+Documentación adicional: Considera agregar documentación más detallada sobre el código, las decisiones de diseño, etc.
+Este README proporciona una base sólida para tu proyecto. Puedes personalizarlo aún más para que sea más informativo y útil para otros desarrolladores.
+
+¿Necesitas más ayuda para personalizar este README?
