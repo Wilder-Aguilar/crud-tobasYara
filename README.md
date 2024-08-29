@@ -48,10 +48,10 @@ La pantalla principal tiene el siguiente aspecto:
 ![](https://iili.io/djLPx2a.png)
 
 Como se puede apreciar se cuenta con lo siguiente: 
-**C (CREATE)**: Un boton para agregar la información de un nuevo miembro de la fraternidad a través de un formulario modal.
-**R (READ)**: La visualización de todos los miembros de la fraternidad en una tabla.
-**U (UPDATE)**: Un boton que permite la modificación de los datos de un miembro existente.
-**D (DELETE)**: Un boton que permite la eliminación de la información de un miembro de la fraternidad. 
+-**C (CREATE)**: Un boton para agregar la información de un nuevo miembro de la fraternidad a través de un formulario modal.
+-**R (READ)**: La visualización de todos los miembros de la fraternidad en una tabla.
+-**U (UPDATE)**: Un boton que permite la modificación de los datos de un miembro existente.
+-**D (DELETE)**: Un boton que permite la eliminación de la información de un miembro de la fraternidad. 
 
 El boton agregar despliega el siguiente formulario:
 
@@ -60,6 +60,10 @@ El boton agregar despliega el siguiente formulario:
 y el icono de editar despliega el siguiente formulario:
 
 ![](https://iili.io/djL6HDN.png)
+
+En el siguiente video se puede ver el funcionamiento:
+
+https://github.com/user-attachments/assets/86ae4fd7-719b-4b0e-8cd6-782bd4e1f0de
 
 
 ## 💻 Tecnologías empleadas 🛠️
