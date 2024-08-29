@@ -42,6 +42,12 @@ Esto iniciará un servidor en tu localhost que servirá como nuestra API simulad
 Puedes abrir `index.html` en tu navegador para ver la aplicación en funcionamiento.
 
 
+## Imágenes de la Web 🌅
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PHoEKq0D0jc?si=TMIcxKzPxVTMPmIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 
 
@@ -122,4 +128,3 @@ GET /family/:id: Obtiene un miembro específico por su ID.
 POST /family: Crea un nuevo miembro.
 PUT /family/:id: Actualiza un miembro existente.
 DELETE /family/:id: Elimina un miembro.
-
