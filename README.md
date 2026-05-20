@@ -77,7 +77,7 @@ https://github.com/user-attachments/assets/86ae4fd7-719b-4b0e-8cd6-782bd4e1f0de
 
 [![HTML](https://img.shields.io/badge/HTML-orange?style=for-the-badge&logo=html5&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/HTML)    Crea la estructura básica de la página, incluyendo formularios y botones.
   
-[![CSS](https://img.shields.io/badge/CSS-blue?style=for-the-badge&logo=css3&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/CSS)    Estiliza la página para que sea visualmente atractiva y fácil de usar.
+[![CSS](https://img.shields.io/badge/CSS-blue?style=for-the-badge&logo=css3&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/CSS) Estiliza la página para que sea visualmente atractiva y fácil de usar.
   
 [![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/JavaScript)    Captura los eventos del usuario, modifica el contenido de la página HTML para mostrar o actualizar datos (Manipulación del DOM); envía solicitudes al servidor para crear, leer, actualizar o eliminar datos y muestra los resultados de las operaciones del servidor en la página.
 
