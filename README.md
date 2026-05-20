@@ -72,7 +72,6 @@ En el siguiente video se puede ver el funcionamiento:
 https://github.com/user-attachments/assets/86ae4fd7-719b-4b0e-8cd6-782bd4e1f0de
 
 
-
 ## 💻 Tecnologías empleadas 🛠️
 
 [![HTML](https://img.shields.io/badge/HTML-orange?style=for-the-badge&logo=html5&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/HTML)    Crea la estructura básica de la página, incluyendo formularios y botones.
@@ -88,6 +87,3 @@ Todo proyecto requiere de mejoras, se tiene identificada la inclusión de fotogr
 
 # Autores ✒️
 Wilder Aguilar - https://github.com/Wilder-Aguilar
-
-# Licencia 📄
-Este proyecto está bajo la Licencia (Tu Licencia) 
