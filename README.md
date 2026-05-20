@@ -85,5 +85,5 @@ https://github.com/user-attachments/assets/86ae4fd7-719b-4b0e-8cd6-782bd4e1f0de
 
 Todo proyecto requiere de mejoras, se tiene identificada la inclusión de fotografías de los componentes de la fraternidad; esto permitirá crear perfiles más completos y personalizables. Si estás interesado en contribuir a esta función, te invito a clonar el repositorio y crear una rama para tus cambios. ¡Tu ayuda es muy valorada!
 
-# Autores ✒️
+# Autor ✒️
 Wilder Aguilar - https://github.com/Wilder-Aguilar
